@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import { getBaseUrl } from '../utils/baseURL';
+import { getBaseUrl } from '../utils/baseURL';
 import TimelineStep from './TimelineStep';
 
 const PaymentSuccess = () => {
@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
         const sessionId = query.get('session_id');
         
         if(sessionId) {
-            fetch('http://localhost:5000/api/orders/confirm-payment', {
+            fetch(`${getBaseUrl()}/api/orders/confirm-payment`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
