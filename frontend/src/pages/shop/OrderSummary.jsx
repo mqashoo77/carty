@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { clearCart } from '../../redux/features/cart/cartSlice';
 
 import { loadStripe } from "@stripe/stripe-js";
-// import { getBaseUrl } from '../../utils/baseURL';
+import { getBaseUrl } from '../../utils/baseURL';
 
 const OrderSummary = () => {
     const dispatch = useDispatch()
@@ -30,7 +30,7 @@ const OrderSummary = () => {
               "Content-Type": "application/json"
         }
 
-        const response = await fetch('http://localhost:5000/api/orders/create-checkout-session', {
+        const response = await fetch(`${getBaseUrl()}/api/orders/create-checkout-session`, {
             method: "POST",
             headers: headers,
             body: JSON.stringify(body)
