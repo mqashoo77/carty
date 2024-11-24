@@ -2,6 +2,7 @@ import React from 'react'
 import OrderSummary from './OrderSummary'
 import { useDispatch } from 'react-redux'
 import { removeFromCart, updateQuantity } from '../../redux/features/cart/cartSlice';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const CartModal = ({ products, isOpen, onClose }) => {
     const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const CartModal = ({ products, isOpen, onClose }) => {
                         <button
                             onClick={() => onClose()}
                             className='text-gray-600 hover:text-gray-900'>
-                            <i className="ri-xrp-fill bg-black p-1 text-white"></i>
+                            <CloseOutlinedIcon/>
                         </button>
                     </div>
 

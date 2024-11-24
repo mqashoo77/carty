@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import bannerImg from "../../assets/laptop.png"
-
 const Banner = () => {
   return (
     <>
@@ -13,7 +11,7 @@ const Banner = () => {
             <button className='btn'><Link to='/shop'>Start Shoping Now</Link></button>
         </div>
         <div className='header__image'>
-            <img src={bannerImg} alt="banner image" />
+            <img src='/laptop.png' alt="banner image" />
         </div>
         
     </div>

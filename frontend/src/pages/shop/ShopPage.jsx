@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 
 import ProductCards from './ProductCards';
+import ProductCard from './ProductCard';
 import ShopFiltering from './ShopFiltering';
 import { useFetchAllProductsQuery } from '../../redux/features/products/productsApi';
 
@@ -78,7 +79,17 @@ const ShopPage = () => {
                         <h3 className='text-xl font-medium mb-4'>
                             Showing {startProduct} to {endProduct} of {totalProducts} products
                         </h3>
-                        <ProductCards products={products} />
+                        
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-stretch'>
+
+                        {
+                            products.map((product, index) => (
+                                <ProductCard key= {index} product ={product}/>
+                            ))
+                        }
+
+                        </div>
+                        
 
                         {/* pagination controls */}
                         <div className='mt-6 flex justify-center'>

@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-import commentorIcon from "../../../assets/avatar.png"
 import { formatDate } from '../../../utils/formateDate'
 import RatingStars from '../../../components/RatingStars'
 import PostAReview from './PostAReview'
@@ -30,7 +28,7 @@ const ReviewsCard = ({ productReviews }) => {
                                 reviews.map((review, index) => (
                                     <div key={index} className='mt-4'>
                                         <div className='flex gap-4  items-center'>
-                                            <img src={commentorIcon} alt="" className='size-14' />
+                                            <img src='/avatar.png' alt="" className='size-14' />
                                             <div className='space-y-1'>
                                                 <p className='text-lg font-medium underline capitalize underline-offset-4 text-blue-400'>{review?.userId?.username}</p>
                                                 <p className='text-[12px] italic'>{formatDate(review?.updatedAt)}</p>

@@ -4,6 +4,8 @@ import { clearCart } from '../../redux/features/cart/cartSlice';
 
 import { loadStripe } from "@stripe/stripe-js";
 import { getBaseUrl } from '../../utils/baseURL';
+import RemoveShoppingCartOutlinedIcon from '@mui/icons-material/RemoveShoppingCartOutlined';
+import PaymentOutlinedIcon from '@mui/icons-material/PaymentOutlined';
 
 const OrderSummary = () => {
     const dispatch = useDispatch()
@@ -50,7 +52,7 @@ const OrderSummary = () => {
     }
 
     return (
-        <div className='bg-primary-light mt-5 rounded text-base'>
+        <div className='bg-white mt-5 rounded text-base'>
             <div className='px-6 py-4 space-y-5'>
                 <h2 className='text-xl text-text-dark'>Order Summary</h2>
                 <p className='text-text-dark mt-2'>SelectedItems: {selectedItems}</p>
@@ -65,7 +67,7 @@ const OrderSummary = () => {
                     }}
                         className='bg-red-500 px-3 py-1.5 text-white  mt-2 rounded-md flex justify-between items-center mb-4'>
                         <span className='mr-2'>Clear cart</span> 
-                        <i className="ri-delete-bin-7-line"></i>
+                        <RemoveShoppingCartOutlinedIcon/>
                     </button>
                     
                     <button 
@@ -73,7 +75,7 @@ const OrderSummary = () => {
                         e.stopPropagation();
                         makePayment();
                     }}
-                    className='bg-green-600 px-3 py-1.5 text-white  mt-2 rounded-md flex justify-between items-center'><span className='mr-2'>Proceed Checkout</span><i className="ri-bank-card-line"></i></button>
+                    className='bg-green-600 px-3 py-1.5 text-white  mt-2 rounded-md flex justify-between items-center'><span className='mr-2'>Proceed Checkout</span><PaymentOutlinedIcon/></button>
                 </div>
             </div>
         </div>
