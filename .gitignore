@@ -9,4 +9,5 @@
 /frontend/Dockerfile
 /frontend/.dockerignore
 docker-compose*.yml
+hello.txt
 
