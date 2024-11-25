@@ -55,8 +55,8 @@ const Navbar = () => {
         <div className="nav__logo">
           <Link to="/">
             CARTY{" "}
-            <span className="ml-1 text-xs font-semibold text-green-500 bg-green-100 px-2 py-0.5 rounded-md">
-              BETA v 0.16.0
+            <span className="ml-1 text-xs font-semibold text-red-500 bg-green-100 px-2 py-0.5 rounded-md">
+              BETA
             </span>
           </Link>
         </div>
