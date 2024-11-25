@@ -10,6 +10,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 const uri = process.env.MONGO_URI; 
 const reactAppUrl  = process.env.REACT_APP_URL
+console.log(reactAppUrl)
+console.log(uri)
 
 
 
@@ -24,7 +26,7 @@ app.use(cors({
 
 }));
 
-console.log(reactAppUrl)
+
 
 
 // mongo DB connections
