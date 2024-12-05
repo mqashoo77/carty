@@ -10,7 +10,7 @@ const UserPayments = () => {
     if(error) return <div>No order found!</div>
     const orders =  ordersdata.orders || {};
     const totalPayment = orders?.reduce((acc, order) => acc + order.amount, 0).toFixed(2);
-    console.log(totalPayment)
+    // console.log(totalPayment)
   return (
     <div className='py-6 px-4'>
         <h3 className='text-xl font-semibold mb-4'>Total Payments</h3>

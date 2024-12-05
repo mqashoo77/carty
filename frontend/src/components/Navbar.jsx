@@ -49,14 +49,14 @@ const Navbar = () => {
 
   return (
     <header className="fixed-nav-bar w-nav">
-      <nav className="max-w-screen-2xl mx-auto px-4 flex justify-between items-center">
+      <nav className="max-w-screen-2xl mx-auto px-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50 bg-white">
         {/* logo */}
 
         <div className="nav__logo">
           <Link to="/">
             CARTY{" "}
             <span className="ml-1 text-xs font-semibold text-red-500 bg-green-100 px-2 py-0.5 rounded-md">
-              BETA
+              BETA 0.0.12v
             </span>
           </Link>
         </div>

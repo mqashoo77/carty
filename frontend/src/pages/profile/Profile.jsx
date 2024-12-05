@@ -21,21 +21,11 @@ const tabsItem = [
     label: "Orders",
     value: "orders",
     path: "/profile/orders",
-  },
-  {
-    label: "Payments",
-    value: "payments",
-    path: "/profile/payments",
-  },
-  {
-    label: "Reviews",
-    value: "reviews",
-    path: "/profile/reviews",
-  },
+  }
 ];
 
 const Profile = () => {
-  const [activeTab, setActiveTab] = useState("dashboard");
+  const [activeTab, setActiveTab] = useState("profile");
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
   if (!user) {

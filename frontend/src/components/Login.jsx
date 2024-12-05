@@ -28,10 +28,8 @@ const Login = () => {
         console.log(response)
         const {token, user} = response;
         disptach(setUser({user}))
-        alert("Login successful");
         switch (user?.role) {
             case 'admin':
-                console.log("Test Admin");
                 navigate("/dashboard", { replace: true });
                 break; 
             case 'user': 
@@ -43,7 +41,7 @@ const Login = () => {
                 break;
           }
        } catch (error) {
-        setMessage("Please provide a valid email and password")
+        setMessage("Wrong Username or Password")
        }
 
     }

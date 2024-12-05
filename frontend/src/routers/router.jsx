@@ -8,10 +8,8 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import PaymentSuccess from "../components/PaymentSuccess";
 import PrivateRoute from "./PrivateRoute";
-import UserOrders from "../pages/profile/UserOrders";
+import Orders from "../pages/profile/Orders";
 import OrderDetails from "../pages/profile/OrderDetails";
-import UserPayments from "../pages/profile/UserPayments";
-import UserReviews from "../pages/profile/UserReviews";
 import UserProfile from "../pages/profile/UserProfile";
 import Profile from "../pages/profile/Profile";
 
@@ -54,9 +52,7 @@ const router = createBrowserRouter([
         children: [
           // user routes
           { path: "", element: <UserProfile /> },
-          { path: "orders", element: <UserOrders /> },
-          { path: "payments", element: <UserPayments /> },
-          { path: "reviews", element: <UserReviews /> },
+          { path: "orders", element: <Orders /> },
         ],
       },
     ],
